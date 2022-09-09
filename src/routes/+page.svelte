@@ -1,6 +1,7 @@
 <script type="ts">
   import dappInfo from "$lib/config/config";
-  import { Section, Container, Column } from "@mateoroldos/svelte.bones"
+  import { Section, Container, Column } from "@mateoroldos/svelte.bones";
+  import { logIn } from '$flow/actions';
 </script>
 
 <Section>
@@ -9,7 +10,7 @@
       <h1>Welcome to <span>{dappInfo.title}</span></h1>
       <p>{dappInfo.description}</p>
       <p>Crafted by {dappInfo.author}</p>
-      <a href="https://discord.com/invite/emeraldcity" target="blank" class="button">Join Discord</a>
+      <button on:click={logIn}>Connect Wallet</button>
     </Column>
   </Container>
 </Section>
