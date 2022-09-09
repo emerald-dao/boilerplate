@@ -12,3 +12,6 @@ SvelteKit Boilerplate for creating Flow dapps.
 - [PostCSS](https://postcss.org/)
   - [CSSNano](https://cssnano.co/)
   - [Autoprefixer](https://github.com/postcss/autoprefixer)
+- [Prettier](https://prettier.io/)
+- [Eslint](https://eslint.org/)
+- [Iconify](https://docs.iconify.design/icon-components/svelte/)
