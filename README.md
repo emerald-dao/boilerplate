@@ -4,7 +4,7 @@ SvelteKit Boilerplate for creating Flow dapps.
 
 ## Features
 
-- [Flow CLI](https://developers.flow.com/tools/flow-cli)
+- [Flow Client Library](https://developers.flow.com/tools/fcl-js)
 - [Emerald Component Library](https://github.com/emerald-dao/component-library)
 - [Svelte Bones](https://github.com/mateoroldos/svelte.bones)
 - [Typescript](https://www.typescriptlang.org/)
