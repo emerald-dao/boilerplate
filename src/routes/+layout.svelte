@@ -1,4 +1,5 @@
 <script type="ts">
+	import '../app.postcss';
 	import '$lib/styles/app.scss';
 </script>
 
