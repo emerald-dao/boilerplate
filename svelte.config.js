@@ -12,7 +12,12 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$atoms: 'src/lib/components/atoms/index.ts',
+			$stores: 'src/lib/stores/',
+			$flow: 'src/flow/'
+		}
 	}
 };
 
