@@ -1,52 +1,52 @@
-export const navItems = [
+export const navElements = [
 	{
-		title: 'Contract Generator',
-		route: '/contract-generator',
+		name: 'Contract Generator',
+		url: '/contract-generator',
 		prefetch: true
 	},
 	{
-		title: 'User Guide',
-		route: '/guide/en/welcome',
+		name: 'User Guide',
+		url: '/guide/en/welcome',
 		prefetch: true
 	},
 	{
-		title: 'Discover',
-		route: '/discover',
+		name: 'Discover',
+		url: '/discover',
 		prefetch: true
 	}
 ];
 
 export const emeraldTools = [
 	{
-		title: 'Emerald Academy',
+		name: 'Emerald Academy',
 		url: 'https://academy.ecdao.org/'
 	},
 	{
-		title: 'FLOAT',
+		name: 'FLOAT',
 		url: 'https://floats.city/'
 	},
 	{
-		title: 'Emerald Bot',
+		name: 'Emerald Bot',
 		url: 'https://bot.ecdao.org/'
 	},
 	{
-		title: 'Geeft',
+		name: 'Geeft',
 		url: 'https://geeft.ecdao.org/'
 	},
 	{
-		title: 'Drizzle',
+		name: 'Drizzle',
 		url: 'https://www.drizzle33.app/'
 	}
 ];
 
 export const socialMedia = [
 	{
-		title: 'Twitter ',
+		name: 'Twitter ',
 		url: 'https://twitter.com/emerald_dao',
 		icon: 'ion:logo-twitter'
 	},
 	{
-		title: 'Github ',
+		name: 'Github ',
 		url: 'https://github.com/emerald-dao',
 		icon: 'ion:logo-github'
 	}
