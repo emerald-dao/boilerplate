@@ -2,6 +2,7 @@
   import dappInfo from "$lib/config/config";
   import { Section, Container, Column } from "@mateoroldos/svelte.bones";
   import { logIn } from '$flow/actions';
+	import { FlowConnect } from "@emerald-dao/component-library";
 </script>
 
 <Section>
@@ -10,7 +11,6 @@
       <h1>Welcome to <span>{dappInfo.title}</span></h1>
       <p>{dappInfo.description}</p>
       <p>Crafted by {dappInfo.author}</p>
-      <button on:click={logIn}>Connect Wallet</button>
     </Column>
   </Container>
 </Section>
