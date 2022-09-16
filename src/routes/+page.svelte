@@ -1,11 +1,13 @@
 <script type="ts">
   import dappInfo from "$lib/config/config";
   import { Section, Container, Column } from "@mateoroldos/svelte.bones";
-  import { logIn } from '$flow/actions';
-	import { FlowConnect } from "@emerald-dao/component-library";
+  import { transactionInProgress } from '$stores/FlowStore'
 </script>
 
 <Section>
+  {#if $transactionInProgress}
+    <div>aaa</div>
+  {/if}
   <Container>
     <Column>
       <h1>Welcome to <span>{dappInfo.title}</span></h1>
