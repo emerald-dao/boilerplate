@@ -15,6 +15,7 @@ SvelteKit Boilerplate for creating Flow dapps.
 - [Prettier](https://prettier.io/)
 - [Eslint](https://eslint.org/)
 - [Iconify](https://docs.iconify.design/icon-components/svelte/)
+- [Storybook](https://storybook.js.org/)
 
 ## Project Setup
 
