@@ -9,6 +9,15 @@
 	import { theme } from '$stores/ThemeStore';
 	import { logIn, unauthenticate } from '$flow/actions';
 	import { user } from '$stores/FlowStore';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		let html = document.querySelector('html');
+
+		if (html) {
+			html.setAttribute('data-theme', $theme);
+		}
+	});
 </script>
 
 <Header themeStore={theme} {logIn} {unauthenticate} user={$user} />
