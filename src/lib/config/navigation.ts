@@ -1,11 +1,11 @@
 export const navElements = [
 	{
-		name: 'Contract Generator',
+		name: 'Contract',
 		url: '/contract-generator',
 		prefetch: true
 	},
 	{
-		name: 'User Guide',
+		name: 'Guide',
 		url: '/guide/en/welcome',
 		prefetch: true
 	},
@@ -24,6 +24,10 @@ export const emeraldTools = [
 	{
 		name: 'FLOAT',
 		url: 'https://floats.city/'
+	},
+	{
+		name: 'Toucans',
+		url: 'https://toucans.ecdao.org/'
 	},
 	{
 		name: 'Emerald Bot',
