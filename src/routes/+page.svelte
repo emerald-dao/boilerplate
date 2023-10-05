@@ -1,26 +1,37 @@
 <script type="ts">
-	import dappInfo from '$lib/config/config';
-	import { transactionInProgress } from '$stores/FlowStore';
+	import { user } from '$lib/stores/UserStore';
+	import { transactionInProgress } from '$lib/stores/TransactionStore';
+	import dappData from '$lib/config/dappData';
 </script>
 
-<section>
-	{#if $transactionInProgress}
-		<div>aaa</div>
+<section class="container">
+	<span>Welcome to</span>
+	<h1>{dappData.title}</h1>
+	<p>{dappData.description}</p>
+	<p>Crafted by {dappData.author}</p>
+	{#if $user !== null && $user.addr}
+		<p>Logged in as {$user.addr}</p>
+	{:else}
+		<p>Not logged in</p>
 	{/if}
-	<div class="container">
-		<h1>Welcome to <span>{dappInfo.title}</span></h1>
-		<p>{dappInfo.description}</p>
-		<p>Crafted by {dappInfo.author}</p>
-	</div>
 </section>
 
 <style type="scss">
-	h1,
-	p {
-		text-align: center;
-	}
+	section {
+		min-height: 50vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-3);
 
-	span {
-		color: var(--clr-primary-main);
+		h1,
+		p {
+			text-align: center;
+		}
+
+		h1 {
+			color: var(--clr-primary-main);
+		}
 	}
 </style>

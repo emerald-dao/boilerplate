@@ -40,7 +40,7 @@
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
 		"vite": "^4.0.0",
-		"@emerald-dao/component-library": "^5.0.0",
+		"@emerald-dao/component-library": "^6.0.0",
 		"@emerald-dao/design-system": "^2.1.0",
 		"@onflow/fcl": "^1.2.1"
 	},

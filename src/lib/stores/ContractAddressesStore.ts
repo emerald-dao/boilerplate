@@ -1,6 +1,12 @@
-import { writable, derived } from 'svelte/store';
+import type { FlowNetwork } from '$lib/types/flow-network.type';
+import { derived } from 'svelte/store';
+import { network } from './NetworkStore';
 
-const contractData = {
+const contractData: {
+	[key: string]: {
+		[key in FlowNetwork]: string;
+	};
+} = {
 	NonFungibleToken: {
 		testnet: '0x631e88ae7f1d7c20',
 		mainnet: '0x1d7e57aa55817448'
@@ -51,12 +57,7 @@ const contractData = {
 	}
 };
 
-export const user = writable(null);
-export const network = writable('testnet');
-export const profile = writable(null);
-export const transactionStatus = writable({});
-export const transactionInProgress = writable(false);
-export const addresses = derived([network], ([$network]) => {
+export const contractAddresses = derived([network], ([$network]) => {
 	return {
 		NonFungibleToken: contractData.NonFungibleToken[$network],
 		MetadataViews: contractData.MetadataViews[$network],

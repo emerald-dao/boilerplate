@@ -1,11 +1,13 @@
+import { contractAddresses } from '$lib/stores/ContractAddressesStore';
+import type { FindProfile } from '@emerald-dao/component-library/models/user.interface';
 import * as fcl from '@onflow/fcl';
 import { get } from 'svelte/store';
 
-export const getFindProfile = async (address) => {
+const getFindProfile = async (address: string): Promise<FindProfile | null> => {
 	try {
 		return await fcl.query({
 			cadence: `
-        import FIND from ${get(addresses).FIND}
+        import FIND from ${get(contractAddresses).FIND}
         pub fun main(address: Address): Profile? {
             if let name = FIND.reverseLookup(address) {
               let profile = FIND.lookup(name)!
@@ -34,3 +36,5 @@ export const getFindProfile = async (address) => {
 		return null;
 	}
 };
+
+export default getFindProfile;

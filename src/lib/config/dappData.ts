@@ -1,9 +1,9 @@
-const dappInfo = {
-	title: 'Emerald Boilerplate',
+const dappData = {
+	title: 'Emerald Labs Boilerplate',
 	description: 'SvelteKit Boilerplate for creating Flow dapps',
-	url: 'pending.com',
+	url: 'your-dapp-url.com',
 	author: 'Emerald City DAO',
 	icon: 'https://i.imgur.com/KSL4gq0.png'
 };
 
-export default dappInfo;
+export default dappData;

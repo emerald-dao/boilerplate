@@ -1,23 +1,24 @@
-import { writable } from 'svelte/store';
+import { writable, type Writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
 // Make any writable store persistent.
-function persistentWritable(key, defaultValue) {
+function persistentWritable<T>(key: string, defaultValue: T) {
 	// Create a writable store.
-	const { subscribe, set, update } = writable();
+	const { subscribe, set, update }: Writable<T> = writable();
 
-	let storedValue;
+	let storedValue: string | null = null;
 	// Get stored value.
 	if (browser) {
 		storedValue = localStorage.getItem(key);
 	}
 
 	// Determine resolved value.
-	const resolvedValue = storedValue === null ? defaultValue : storedValue;
+	const resolvedValue: T | null | string = storedValue === null ? defaultValue : storedValue;
+
 	if (resolvedValue && isJsonString(resolvedValue)) {
-		set(JSON.parse(resolvedValue));
+		set(JSON.parse(resolvedValue as string));
 	} else {
-		set(resolvedValue);
+		set(resolvedValue as T);
 	}
 
 	// Subscribe to changes.
@@ -31,9 +32,9 @@ function persistentWritable(key, defaultValue) {
 	return { subscribe, set, update };
 }
 
-function isJsonString(str) {
+function isJsonString<T>(str: T | string) {
 	try {
-		JSON.parse(str);
+		JSON.parse(str as string);
 	} catch (e) {
 		return false;
 	}

@@ -1,5 +1,5 @@
 import { config } from '@onflow/fcl';
-import dappInfo from '$lib/config/config';
+import dappInfo from '$lib/config/dappData';
 
 config()
 	.put('app.detail.title', dappInfo.title)

@@ -1,5 +1,6 @@
-// import persistentWritable from '$lib/utilities/persistentWritable';
-import type { Writable } from 'svelte/store';
-import { writable } from 'svelte/store';
+import persistentWritable from '$lib/utilities/persistentWritable';
 
-export const theme: Writable<'light' | 'dark'> = writable('dark');
+export const theme: ReturnType<typeof persistentWritable<'light' | 'dark'>> = persistentWritable(
+	'theme',
+	'dark'
+);
