@@ -9,13 +9,14 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write .",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@babel/core": "^7.19.1",
+		"@emerald-dao/component-library": "^6.0.0",
+		"@emerald-dao/design-system": "^2.1.0",
 		"@iconify/svelte": "^3.0.0",
+		"@onflow/fcl": "^1.2.1",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "^1.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
@@ -25,7 +26,6 @@
 		"cssnano": "^5.1.13",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-storybook": "^0.6.4",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"isomorphic-fetch": "^3.0.0",
 		"postcss": "^8.4.14",
@@ -39,10 +39,7 @@
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
-		"vite": "^4.0.0",
-		"@emerald-dao/component-library": "^6.0.0",
-		"@emerald-dao/design-system": "^2.1.0",
-		"@onflow/fcl": "^1.2.1"
+		"vite": "^4.0.0"
 	},
 	"type": "module"
 }
