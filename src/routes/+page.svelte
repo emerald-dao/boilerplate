@@ -1,6 +1,5 @@
 <script type="ts">
 	import { user } from '$lib/stores/UserStore';
-	import { transactionInProgress } from '$lib/stores/TransactionStore';
 	import dappData from '$lib/config/dappData';
 </script>
 
@@ -9,11 +8,6 @@
 	<h1>{dappData.title}</h1>
 	<p>{dappData.description}</p>
 	<p>Crafted by {dappData.author}</p>
-	{#if $user !== null && $user.addr}
-		<p>Logged in as {$user.addr}</p>
-	{:else}
-		<p>Not logged in</p>
-	{/if}
 </section>
 
 <style type="scss">

@@ -1,6 +1,6 @@
 import '../config';
 import * as fcl from '@onflow/fcl';
-import { user } from '../../lib/stores/UserStore';
+import { user } from '$lib/stores/UserStore';
 import { browser } from '$app/environment';
 
 if (browser) {
@@ -11,5 +11,4 @@ if (browser) {
 
 // Lifecycle FCL Auth functions
 export const unauthenticate = () => fcl.unauthenticate();
-export const logIn = async () => await fcl.logIn();
-export const signUp = () => fcl.signUp();
+export const logIn = () => fcl.logIn();
