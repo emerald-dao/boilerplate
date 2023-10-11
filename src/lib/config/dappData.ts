@@ -1,6 +1,6 @@
 const dappData = {
-	title: 'Emerald Labs Boilerplate',
-	description: 'SvelteKit Boilerplate for creating Flow dapps',
+	title: 'Emerald City Boilerplate',
+	description: 'SvelteKit Boilerplate for creating Flow DApps',
 	url: 'your-dapp-url.com',
 	author: 'Emerald City DAO',
 	icon: 'https://i.imgur.com/KSL4gq0.png'
