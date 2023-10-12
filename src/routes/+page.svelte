@@ -1,5 +1,4 @@
 <script type="ts">
-	import { user } from '$lib/stores/UserStore';
 	import dappData from '$lib/config/dappData';
 </script>
 
