@@ -10,10 +10,10 @@
 	import { theme } from '$stores/ThemeStore';
 	import { transaction } from '$stores/TransactionStore';
 	import { profile, user } from '$stores/UserStore';
-	import { network } from '$stores/NetworkStore';
 	import { logIn, unauthenticate } from '../lib/flow/actions/authentication';
 	import { Header, Footer, TransactionModal } from '@emerald-dao/component-library';
 	import { onMount } from 'svelte';
+	import { network } from '$flow/config';
 
 	onMount(() => {
 		let html = document.querySelector('html');
@@ -55,7 +55,7 @@
 	themeStore={theme}
 	user={$user}
 	profile={$profile}
-	network={$network}
+	{network}
 	transactionInProgress={$transaction.progress}
 	{logIn}
 	{unauthenticate}
